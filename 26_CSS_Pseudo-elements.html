@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Web Page with CSS Pseudo-elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Định dạng cho phần header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1::before {
+            content: "🌟 "; /* Thêm biểu tượng ngôi sao trước tiêu đề */
+            color: yellow;
+        }
+
+        h1::after {
+            content: " ✨"; /* Thêm biểu tượng lấp lánh sau tiêu đề */
+            color: yellow;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color: blue;
+            font-weight: bold;
+            float: left;
+            margin-right: 5px;
+        }
+
+        p::first-line {
+            font-style: italic;
+            color: green;
+        }
+
+        ::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    
+    <section>
+        <p>
+            This is a demonstration of CSS pseudo-elements. 
+            The first letter of this paragraph is styled differently, and the first line is italicized. 
+            You can also see that if you highlight this text, the selection color will change.
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Example</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        /*Thuộc tính flex-direction*/
+        .container {
+            display: flex;
+            flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+        }
+        /*Thuộc tính justify-content*/
+        .container {
+            display: flex;
+            justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+        }
+        /*Thuộc tính align-items*/
+        .container {
+            display: flex;
+            align-items: flex-end; /* Căn các phần tử về phía cuối theo trục dọc */
+        }
+        /*Thuộc tính flex-wrap*/
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các phần tử xuống hàng */
+        }
+        /*flex-grow*/
+        .item {
+            flex-grow: 1; /* Phần tử sẽ giãn ra để chiếm không gian trống */
+        }
+        /*flex-shrink*/
+        .item {
+            flex-shrink: 0; /* Phần tử không thu nhỏ khi không gian hẹp */
+        }
+        /*flex-basis*/
+        .item {
+            flex-basis: 200px; /* Đặt kích thước mặc định cho phần tử */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    
+</body>
+</html>

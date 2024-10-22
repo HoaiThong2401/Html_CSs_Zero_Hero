@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example - 12 Properties</title>
+    <style>
+        /* 1. display: flex / inline-flex */
+        .container1 {
+            display: flex;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container2 {
+            display: inline-flex;
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 2. flex-direction: row / column */
+        .container3 {
+            display: flex;
+            flex-direction: row; /* Sắp xếp theo hàng ngang */
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container4 {
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo hàng dọc */
+            background-color: lightpink;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 3. flex-wrap: nowrap / wrap / wrap-reverse */
+        .container5 {
+            display: flex;
+            flex-wrap: nowrap; /* Không xuống hàng */
+            background-color: lightyellow;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container6 {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép xuống hàng */
+            background-color: lightgray;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container7 {
+            display: flex;
+            flex-wrap: wrap-reverse; /* Xuống hàng ngược */
+            background-color: lightcyan;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 4. flex-basis: <length> */
+        .item {
+            background-color: steelblue;
+            color: white;
+            margin: 5px;
+            padding: 20px;
+            text-align: center;
+            flex-basis: 100px; /* Kích thước mặc định */
+        }
+
+        /* 5. justify-content: flex-start / flex-end / center / space-between / space-around */
+        .container8 {
+            display: flex;
+            justify-content: space-between; /* Khoảng cách đều giữa các item */
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 6. justify-self: flex-start / flex-end / center */
+        .container9 {
+            display: flex;
+            justify-self: center; /* Căn giữa cho phần tử con */
+            background-color: lightseagreen;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 7. align-content: flex-start / flex-end / center */
+        .container10 {
+            display: flex;
+            align-content: center; /* Căn giữa theo trục dọc */
+            flex-wrap: wrap; /* Cho phép xuống hàng */
+            background-color: lightsteelblue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 8. align-self: flex-start / flex-end / center */
+        .container11 {
+            display: flex;
+            align-items: flex-start; /* Căn trái */
+            background-color: lightpurple;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .self-centered {
+            align-self: center; /* Phần tử này sẽ căn giữa theo trục dọc */
+        }
+
+        /* 9. flex-grow: <number> */
+        .container12 {
+            display: flex;
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .grow {
+            flex-grow: 2; /* Phần tử này sẽ giãn nhiều hơn so với các phần tử khác */
+        }
+
+        /* 10. flex-shrink: <number> */
+        .shrink {
+            flex-shrink: 1; /* Phần tử này sẽ co lại khi không đủ không gian */
+        }
+
+        /* 11. flex: <number> (tổ hợp của grow, shrink và basis) */
+        .flex {
+            flex: 1 1 100px; /* grow = 1, shrink = 1, basis = 100px */
+        }
+
+        /* 12. order: <number> */
+        .container13 {
+            display: flex;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .first {
+            order: 2; /* Hiển thị sau */
+        }
+
+        .second {
+            order: 1; /* Hiển thị trước */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Example - 12 Properties</h1>
+
+    <!-- 1. display: flex và inline-flex -->
+    <h2>1. Display: flex và inline-flex</h2>
+    <div class="container1">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <div class="container2">
+        <div class="item">Inline 1</div>
+        <div class="item">Inline 2</div>
+        <div class="item">Inline 3</div>
+    </div>
+
+    <!-- 2. flex-direction: row và column -->
+    <h2>2. Flex-direction: row và column</h2>
+    <div class="container3">
+        <div class="item">Row 1</div>
+        <div class="item">Row 2</div>
+    </div>
+
+    <div class="container4">
+        <div class="item">Column 1</div>
+        <div class="item">Column 2</div>
+    </div>
+
+    <!-- 3. flex-wrap: nowrap, wrap, wrap-reverse -->
+    <h2>3. Flex-wrap: nowrap, wrap, wrap-reverse</h2>
+    <div class="container5">
+        <div class="item">No Wrap 1</div>
+        <div class="item">No Wrap 2</div>
+    </div>
+
+    <div class="container6">
+        <div class="item">Wrap 1</div>
+        <div class="item">Wrap 2</div>
+        <div class="item">Wrap 3</div>
+        <div class="item">Wrap 4</div>
+    </div>
+
+    <div class="container7">
+        <div class="item">Wrap Reverse 1</div>
+        <div class="item">Wrap Reverse 2</div>
+        <div class="item">Wrap Reverse 3</div>
+    </div>
+
+    <!-- 4. flex-basis -->
+    <h2>4. Flex-basis</h2>
+    <div class="container1">
+        <div class="item">Basis 1</div>
+        <div class="item">Basis 2</div>
+        <div class="item">Basis 3</div>
+    </div>
+
+    <!-- 5. justify-content -->
+    <h2>5. Justify-content: space-between</h2>
+    <div class="container8">
+        <div class="item">Space 1</div>
+        <div class="item">Space 2</div>
+        <div class="item">Space 3</div>
+    </div>
+
+    <!-- 6. justify-self -->
+    <h2>6. Justify-self</h2>
+    <div class="container9">
+        <div class="item">Justify Center</div>
+    </div>
+
+    <!-- 7. align-content -->
+    <h2>7. Align-content</h2>
+    <div class="container10">
+        <div class="item">Align 1</div>
+        <div class="item">Align 2</div>
+    </div>
+
+    <!-- 8. align-self -->
+    <h2>8. Align-self</h2>
+    <div class="container11">
+        <div class="item">Align Start</div>
+        <div class="item self-centered">Align Self Center</div>
+        <div class="item">Align End</div>
+    </div>
+
+    <!-- 9. flex-grow -->
+    <h2>9. Flex-grow</h2>
+    <div class="container12">
+        <div class="item grow">Grow 1</div>
+        <div class="item">Grow 2</div>
+    </div>
+
+    <!-- 10. flex-shrink -->
+    <h2>10. Flex-shrink</h2>
+    <div class="container12">
+        <div class="item shrink">Shrink 1</div>
+        <div class="item">No Shrink</div>
+    </div>
+
+    <!-- 11. flex (grow, shrink, basis) -->
+    <h2>11. Flex (grow, shrink, basis)</h2>
+    <div class="container12">
+        <div class="item flex">Flex 1</div>
+        <div class="item">Flex 2</div>
+    </div>
+
+    <!-- 12. order -->
+    <h2>12. Order</h2>
+    <div class="container13">
+        <div class="item second">Second</div>
+        <div class="item first">First</div>
+    </div>
+</body>
+</html>

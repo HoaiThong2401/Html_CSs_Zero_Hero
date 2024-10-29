@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Demo</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .card__title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card__description {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Thêm một số kiểu cho thân trang */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="card__title">Tiêu đề Card</h2>
+        <p class="card__description">Mô tả ngắn gọn về nội dung của card.</p>
+        <button class="button card__button">Xem thêm</button>
+    </div>
+
+    <div class="card">
+        <h2 class="card__title">Tiêu đề Card Khác</h2>
+        <p class="card__description">Mô tả ngắn gọn về nội dung của card khác.</p>
+        <button class="button card__button">Xem thêm</button>
+    </div>
+</body>
+</html>

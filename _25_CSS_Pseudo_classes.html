@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-classes Example</title>
+    <style>
+      a {
+        color: blue;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: red;
+      }
+      a:visited {
+        color: purple;
+      }
+      a:active {
+        color: green;
+      }
+      input:focus {
+        border: 2px solid blue;
+      }
+      p:first-child {
+        font-weight: bold;
+      }
+      p:last-child {
+        font-style: italic;
+      }
+      p:nth-child(2) {
+        color: orange;
+      }
+      p:not(:first-child) {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">This is a link</a>
+    <input type="text" placeholder="Focus on me" />
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+  </body>
+</html>

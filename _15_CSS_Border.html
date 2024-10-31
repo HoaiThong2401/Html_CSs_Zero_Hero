@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Border Example</title>
+    <style>
+      .Box-example {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        padding: 10px;
+
+        /* Border */
+        border-width: 1px;
+        border-style: dotted;
+        border-color: black;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid black; /* Đường viền đen, dày 2px */
+      }
+
+      .box-top {
+        border-top: 4px dashed red; /* Đường viền trên, dày 4px, kiểu dashed, màu đỏ */
+      }
+
+      .box-right {
+        border-right: 3px dotted blue; /* Đường viền phải, dày 3px, kiểu dotted, màu xanh */
+      }
+
+      .box-bottom {
+        border-bottom: 5px double green; /* Đường viền dưới, dày 5px, kiểu double, màu xanh lá */
+      }
+
+      .box-left {
+        border-left: 6px groove purple; /* Đường viền trái, dày 6px, kiểu groove, màu tím */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">This is a box with a border.</div>
+    <div class="box box-top">This is a box with a top border.</div>
+    <div class="box box-right">This is a box with a right border.</div>
+    <div class="box box-bottom">This is a box with a bottom border.</div>
+    <div class="box box-left">This is a box with a left border.</div>
+  </body>
+</html>

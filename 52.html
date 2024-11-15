@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Modal - Đăng Ký Đăng Nhập</title>
+    <link rel="stylesheet" href="52.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <span class="logo">WELCOME</span>
+            <nav>
+                <ul>
+                    <li>Thông báo</li>
+                    <li>Trợ giúp</li>
+                    <li><button onclick="openModal('register')">Đăng Ký</button></li>
+                    <li><button onclick="openModal('login')">Đăng Nhập</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ 
+
+    <!-- Modal Đăng Ký -->
+    <div id="register-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register')">&times;</span>
+            <h2>Đăng Ký</h2>
+            <form class="input-group">
+                <input type="text" class="input-field" placeholder="Số điện thoại" required>
+                <div class="captcha-container">
+                    <input type="text" class="input-field captcha-input" placeholder="Nhập mã" required>
+                    <span class="captcha-code">8FW</span>
+                </div>
+                <input type="text" class="input-field" placeholder="Mã xác minh" required>
+                <button type="submit" class="submit-btn">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Đăng Nhập -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')">&times;</span>
+            <h2>Đăng Nhập</h2>
+            <form class="input-group">
+                <input type="text" class="input-field" placeholder="Số điện thoại" required>
+                <input type="password" class="input-field" placeholder="Mật khẩu" required>
+                <button type="submit" class="submit-btn">Đăng Nhập</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="52.js"></script>
+</body>
+</html>

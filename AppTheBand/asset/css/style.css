@@ -1,0 +1,302 @@
+/* Reset CSS cơ bản cho toàn trang */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Cài đặt phông chữ cho toàn bộ trang web */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Vùng chính của trang web */
+#main {
+    
+}
+
+/* Phần header (đầu trang), với chiều cao và màu nền */
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+#nav{
+    display: inline-block;
+}
+
+/* Định dạng danh sách menu điều hướng và menu phụ */
+#nav, .subnav {
+    list-style-type: none; /* Không hiển thị dấu đầu dòng */
+    padding: 0; /* Xóa khoảng cách mặc định */
+    margin: 0; /* Xóa khoảng cách mặc định */
+}
+
+/* Menu chính - các mục ngang */
+#nav > li {
+    display: inline-block; /* Hiển thị các mục menu ngang */
+}
+
+/* Định vị các mục menu và các mục phụ */
+#nav li {
+    position: relative; /* Đặt vị trí tương đối cho các mục menu */
+}
+
+/* Định dạng liên kết trong menu chính */
+#nav > li > a {
+    color: #fff; /* Màu chữ cho liên kết chính */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-decoration: none; /* Không có gạch chân */
+}
+
+/* Cài đặt cho các liên kết menu con */
+#nav li a {
+    line-height: 46px; /* Chiều cao cho các liên kết */
+    padding: 0 24px; /* Khoảng cách cho các liên kết */
+    display: block; /* Đảm bảo các liên kết chiếm toàn bộ chiều rộng */
+}
+
+/* Hiển thị menu phụ khi hover */
+#nav li:hover .subnav {
+    display: block; /* Hiển thị menu phụ khi hover */
+}
+
+/* Thay đổi màu sắc liên kết khi hover */
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000; /* Đổi màu chữ khi hover */
+    background-color: #ccc; /* Đổi màu nền khi hover */
+}
+
+/* Định dạng menu phụ */
+#nav .subnav {
+    display: none; /* Ẩn menu phụ mặc định */
+    position: absolute; /* Đặt vị trí của menu phụ */
+    background-color: #fff; /* Màu nền menu phụ */
+    top: 46px; /* Vị trí bên dưới menu chính */
+    left: 0; /* Đặt lại vị trí từ bên trái */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Thêm bóng cho menu phụ */
+}
+
+/* Định dạng liên kết trong menu phụ */
+#nav .subnav a {
+    color: #000; /* Màu chữ cho liên kết trong menu phụ */
+    padding: 0 16px; /* Khoảng cách cho các liên kết trong menu phụ */
+    line-height: 38px; /* Chiều cao cho các liên kết trong menu phụ */
+    text-decoration: none; /* Không có gạch chân cho liên kết menu phụ */
+}
+
+
+
+/* nút search */
+#nav .ti-angle-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+/* Khu vực slider (trình chiếu hình ảnh) */
+#slider {
+    margin-top: 46px;
+    padding: 50%;
+    height: 400px; /* Chiều cao của khu vực slider */
+    background: url('/asset/img/slider/slider1.jpg') top center no-repeat; /* Đặt hình nền cho slider */
+    background-size: contain; /* Thay thế cover bằng contain */
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+}
+
+/* Nội dung chính của trang web */
+#content {
+    margin-top: -700px;
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content .members-list{
+    margin-top:48px;
+}
+
+.clear{
+    clear: both;
+}
+
+#content .member-item{
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+    
+}
+
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.text-white{
+    color: #fff;
+}
+
+.tour-section{
+    background-color: #000;
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tickets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    background-color: red;
+    color: white;
+    padding: 3px 14px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+
+/* Places */
+.places-list{
+     margin: 32px -8px ; 
+}
+
+.place-item{
+    float: left;
+    width: 33.3333%;
+    padding: 0 8px;
+    
+}
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn{
+    color:#fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.place-buy-btn:hover{
+    color: #000;;
+    background-color: #ccc;
+}
+/* Phần footer (chân trang) */
+#footer {
+
+}

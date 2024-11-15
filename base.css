@@ -1,0 +1,48 @@
+/*Bai42 Định nghĩa các biến màu ở mức root */
+:root {
+    --primary-color: #ee4d2d;
+    --white-color: #fff; /* Màu trắng */
+    --black-color: #000; /* Màu đen */ 
+    --text-color: #333;  /* Màu chữ, xám đậm */
+}
+
+/* Áp dụng box-sizing: border-box cho tất cả các phần tử để dễ kiểm soát kích thước */
+* {
+    box-sizing: inherit;
+}
+
+/* Thiết lập các kiểu cơ bản cho tài liệu HTML */
+html {
+    font-size: 62.5%; /* Đặt kích thước font cơ bản thành 10px (62.5% của 16px mặc định), giúp dễ tính toán rem */
+    line-height: 1.6rem; /* Định nghĩa chiều cao dòng */
+    font-family: 'Roboto', 'sans-serif'; /* Sử dụng font 'Roboto' hoặc mặc định là sans-serif */
+    box-sizing: border-box; /* Đặt box-sizing là border-box để kích thước nhất quán */
+}
+
+/* Lưới (grid) chứa với max-width là 1200px và khả năng hiển thị toàn chiều rộng */
+.grid {
+    width: 1200px; /* Chiều rộng cơ bản */
+    max-width: 100%; /* Đảm bảo lưới responsive */
+    margin: 0 auto; /* Xóa bỏ margin mặc định */
+}
+
+/* Lưới (grid) toàn chiều rộng */
+.grid__full-width {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+}
+
+/* Hàng (row) của lưới */
+.grid__row {
+    display: flex; /* Sử dụng flexbox */
+    flex-wrap: wrap; /* Các phần tử tự xuống dòng khi không đủ không gian */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

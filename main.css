@@ -1,0 +1,231 @@
+/* Bai43 */
+.header {
+    height: 120px; /* Chiều cao của phần header */
+    background-image: linear-gradient(0, #fe6433, #f53e2d); /* Nền dạng gradient từ màu cam đến đỏ */
+} 
+
+.header__navbar {
+    display: flex; /* Sử dụng flexbox để xếp phần tử theo hàng ngang */
+    justify-content: space-between; /* Canh đều khoảng cách giữa các phần tử */
+} 
+
+.header__navbar-list {
+    list-style: none; /* Xóa bỏ dấu đầu dòng của danh sách */
+    padding-left: 0; /* Xóa khoảng đệm bên trái */
+    margin-top: 4px;
+}
+
+.header__navbar-item {
+    margin: 0 8px; /* Khoảng cách ngang giữa các mục navbar */
+    position: relative; /* Đặt vị trí tương đối để hỗ trợ phần tử con */
+    min-height: 26px;
+}
+
+.header__navbar-item, 
+.header__navbar-icon-link,
+.header__navbar-item-link {
+    display: inline-block; /* Đặt mỗi mục hiển thị theo dòng ngang */
+    font-size: 1.4rem; /* Kích thước font chữ */
+    color: var(--white-color); /* Màu chữ là màu trắng */
+    text-decoration: none; /* Xóa gạch chân mặc định của liên kết */
+    font-weight: 300; /* Độ đậm của font chữ */
+}
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover
+{
+    cursor: pointer;
+    color: rgba(225,225,225,0.7);
+}
+
+.header__navbar-item--strong {
+    font-weight: 400; /* Độ đậm cao hơn cho những mục navbar cần nhấn mạnh */
+} 
+
+
+.header__navbar-item--separate::after {
+    content: ""; /* Nội dung rỗng để tạo dấu phân cách */
+    display: block;
+    position: absolute; /* Vị trí tuyệt đối so với phần tử cha */
+    border-left: 1px solid #FB9086; /* Đường viền trái để làm dấu phân cách */
+    height: 16px; /* Chiều cao của dấu phân cách */
+    right: -9px; /* Căn chỉnh dấu phân cách cách bên phải */
+    top: 50%; /* Đặt ở giữa theo chiều dọc */
+    transform: translateY(-50%); /* Đưa dấu phân cách lên chính giữa */
+} 
+/* Bai44 */
+.header__navbar-icon{
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+/* Bai46 */
+.header__navbar-item, 
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+.header__navbar-item--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+
+/* Header QR code, Bài 47 */
+.header__qr{
+    width: 210px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__qr::before{
+    content: "";
+    left: 0;
+    top: -16px;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    display: block;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__qr-link:nth-child(1){
+    margin-left: 11px;
+}
+.header__qr-link:nth-child(2){
+    margin-right: 11px;
+}
+
+.header__qr-download-img{
+    height: 18px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
+/* Header Notify */
+@keyframes headerNotify_Growth {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.header__notify{
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #D3D3D3;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: 90% top;
+    animation: headerNotify_Growth ease-in 0.25s ;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__notify::before{
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__notify::after{
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -15px;
+    width: 90px;
+    height: 20px;
+}
+
+.header__notify-header h3{
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.header__notify-list{
+    padding-left: 0;
+}
+
+.header__notify-item{
+    display: flex;
+    height: 100px;
+}
+.header__notify-item:hover{
+    background-color: #f7f7f7;
+}
+
+.header__notify-item--viewed{
+    background-color:rgb(238, 77, 45, 0.08);
+}
+
+.header__notify-link{
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img{
+    width: 50px;
+    height: 70px;
+}
+
+.header__notify-info{
+    margin-left: 12px;
+}
+
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.header__notify-description{
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #756F6E;
+    margin-top: 4px;
+}
+
+.header__notify-footer{
+    text-align: center;
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 8px 48px;
+    margin: auto;
+    font-size: 1.4rem;
+}

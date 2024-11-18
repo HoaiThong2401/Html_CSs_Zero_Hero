@@ -1,0 +1,187 @@
+/* Cơ bản cho trang web */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ff6600;
+  padding: 20px 0;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-container .logo img {
+  height: 40px;
+}
+
+.header-container .search-bar input {
+  padding: 10px;
+  width: 400px;
+  border: none;
+  border-radius: 20px;
+}
+
+.header-container .search-bar button {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+header .cart a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+main {
+  padding: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.categories {
+  margin-top: 20px;
+}
+
+.categories h2 {
+  font-size: 24px;
+}
+
+.category-list {
+  display: flex;
+  gap: 20px;
+}
+
+.category-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.products {
+  margin-top: 40px;
+}
+
+.products h2 {
+  font-size: 24px;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.product-item:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  width: 30%;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  color: #ff6600;
+}
+
+.footer-contact {
+  width: 30%;
+}
+
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#map {
+  height: 300px;  /* Chiều cao của bản đồ */
+  width: 100%;    /* Chiều rộng chiếm toàn bộ chiều rộng của phần tử chứa */
+  margin-top: 20px;
+  border-radius: 10px; /* Tạo góc bo tròn cho bản đồ */
+}
+
+
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}

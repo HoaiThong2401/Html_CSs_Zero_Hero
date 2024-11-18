@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mua Vé Modal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nút để mở Modal -->
+  <button id="openModalBtn">Mua Vé</button>
+
+  <!-- Modal -->
+  <div id="ticketModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Mua Vé</h2>
+        <span id="closeModalBtn" class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Thông tin chi tiết vé.</p>
+        <select>
+          <option>Đà Nẵng</option>
+          <option>Vũng Tàu</option>
+        </select>
+        <!-- Các form nhập thông tin mua vé có thể được đặt ở đây -->
+      </div>
+      <div class="modal-footer">
+        <button>Mua</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

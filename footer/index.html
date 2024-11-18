@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Shopee</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="shopee-logo.png" alt="Shopee Logo" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm sản phẩm, danh mục, cửa hàng..." />
+        <button>Tìm kiếm</button>
+      </div>
+      <div class="cart">
+        <a href="#">Giỏ hàng</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="banner">
+      <img src="shopee-banner.jpg" alt="Shopee Banner" />
+    </div>
+
+    <div class="categories">
+      <h2>Danh mục sản phẩm</h2>
+      <div class="category-list">
+        <div class="category-item">Điện thoại</div>
+        <div class="category-item">Laptop</div>
+        <div class="category-item">Thời trang</div>
+        <div class="category-item">Mỹ phẩm</div>
+      </div>
+    </div>
+
+    <div class="products">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="product-list">
+        <div class="product-item">Sản phẩm 1</div>
+        <div class="product-item">Sản phẩm 2</div>
+        <div class="product-item">Sản phẩm 3</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Các liên kết về Shopee -->
+      <div class="footer-links">
+        <h3>Về Shopee</h3>
+        <ul>
+          <li><a href="#">Giới thiệu về Shopee</a></li>
+          <li><a href="#">Chương trình khuyến mãi</a></li>
+          <li><a href="#">Shopee Blog</a></li>
+          <li><a href="#">Shopee Mall</a></li>
+          <li><a href="#">Hỗ trợ</a></li>
+        </ul>
+      </div>
+
+      <!-- Các chính sách -->
+      <div class="footer-links">
+        <h3>Chính sách</h3>
+        <ul>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+        </ul>
+      </div>
+
+      <!-- Liên hệ và bản đồ -->
+      <div class="footer-contact">
+        <h3>Liên hệ</h3>
+        <p>Hotline: 1900-1234</p>
+        <p>Email: support@shopee.vn</p>
+
+        <!-- Google Map -->
+        <div id="map" class="map"></div>
+      </div>
+    </div>
+
+    <!-- Dưới footer -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shopee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Google Map Initialization
+    function initMap() {
+      var shopeeLocation = { lat: 10.8231, lng: 106.6297 }; // Vị trí giả định của Shopee tại TP.HCM
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: shopeeLocation
+      });
+
+      var marker = new google.maps.Marker({
+        position: shopeeLocation,
+        map: map,
+        title: 'Shopee Location'
+      });
+    }
+  </script>
+</body>
+
+</html>

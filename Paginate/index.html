@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Trang Shopee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Shopee_logo_2021.png" alt="Shopee">
+            </div>
+            <div class="login">
+                <button class="login-btn">Đăng nhập</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Sản phẩm Shopee</h1>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="product-list" id="product-list">
+            <!-- Sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+
+        <!-- Phân trang -->
+        <div class="pagination">
+            <button class="page-btn" id="first-page">Đầu</button>
+            <button class="page-btn" id="prev-page">Trước</button>
+            <button class="page-btn active" id="page-1">1</button>
+            <button class="page-btn" id="page-2">2</button>
+            <button class="page-btn" id="page-3">3</button>
+            <button class="page-btn" id="next-page">Sau</button>
+            <button class="page-btn" id="last-page">Cuối</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

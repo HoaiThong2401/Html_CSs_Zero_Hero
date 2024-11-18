@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liên Hệ Với Chúng Tôi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contact-section">
+        <div class="form-wrapper">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Chúng tôi luôn sẵn sàng lắng nghe phản hồi của bạn!</p>
+            <form class="form-lien-he" action="/submit-form" method="POST">
+                <div class="input-box">
+                    <input type="text" id="ten" name="ten" required>
+                    <label for="ten">Họ và Tên</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="tieu-de" name="tieu-de" required>
+                    <label for="tieu-de">Tiêu đề</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="input-box">
+                    <textarea id="tin-nhan" name="tin-nhan" rows="5" required></textarea>
+                    <label for="tin-nhan">Nội dung</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <button type="submit" class="btn">Gửi tin nhắn</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

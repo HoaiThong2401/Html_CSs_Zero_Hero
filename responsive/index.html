@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Design là gì?</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="content">
+            <h2>Thiết kế Web Phản Hồi (Responsive Web Design)</h2>
+            <p>
+                Thiết kế web phản hồi là kỹ thuật phát triển trang web sao cho giao diện và bố cục của trang tự động điều chỉnh 
+                dựa trên kích thước màn hình của thiết bị người dùng, từ máy tính để bàn đến điện thoại di động.
+            </p>
+            <h3>Media Queries</h3>
+            <p>
+                Media queries là một phần quan trọng của thiết kế web phản hồi. Nó cho phép trang web thay đổi phong cách CSS 
+                dựa trên các yếu tố như chiều rộng, chiều cao của màn hình, và các thuộc tính khác của thiết bị. 
+                Ví dụ, bạn có thể thay đổi bố cục từ một dạng hiển thị trên máy tính sang một dạng hiển thị dễ đọc hơn trên thiết bị di động.
+            </p>
+            <p>Dưới đây là một ví dụ về cách sử dụng media queries trong CSS:</p>
+            <pre>
+                <code>
+                    /* Máy tính để bàn */
+                    @media (min-width: 1024px) {
+                        .container {
+                            width: 80%;
+                        }
+                    }
+
+                    /* Máy tính bảng */
+                    @media (max-width: 768px) {
+                        .container {
+                            width: 100%;
+                        }
+                    }
+
+                    /* Điện thoại di động */
+                    @media (max-width: 480px) {
+                        .container {
+                            width: 100%;
+                            padding: 10px;
+                        }
+                    }
+                </code>
+            </pre>
+        </section>
+        <aside class="sidebar">
+            <h2>Tại sao Media Queries quan trọng?</h2>
+            <p>
+                Media queries giúp trang web của bạn dễ dàng truy cập trên mọi thiết bị, 
+                giúp cải thiện trải nghiệm người dùng và tối ưu hóa hiệu suất.
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trang Web Responsive của Tôi</p>
+    </footer>
+</body>
+</html>
